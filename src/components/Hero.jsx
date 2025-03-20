@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { FaRocket, FaDollarSign, FaPaintBrush } from 'react-icons/fa';
 import { CiLocationArrow1 } from "react-icons/ci";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { IoCloseOutline } from 'react-icons/io5';
 
 const Hero = ({bulb}) => {
     const [isHovered, setIsHovered] = useState(false);
@@ -8,6 +10,14 @@ const Hero = ({bulb}) => {
     const [lastScrollY, setLastScrollY] = useState(0);
     const [scrollingUp, setScrollingUp] = useState(true);
 
+
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  
     // Track scroll direction
     useEffect(() => {
         const handleScroll = () => {
@@ -55,17 +65,78 @@ const Hero = ({bulb}) => {
 
     const handleLinkClick = (link) => {
         setActiveLink(link);
+        setIsMenuOpen(false);
     };
 
     return (
         <div id="home" className="bg-gradient-to-b from-[#050E1E] via-[#03222D] to-[#1C5B6C] relative overflow-hidden">
             <nav
-                className={`bg-transparent pt-4 fixed top-0 left-0 right-0 z-20 backdrop-blur-md transition-transform duration-300 ${
+                className={`sm:items-end sm:flex h-16 fixed top-0 left-0 right-0 z-20 backdrop-blur-md transition-transform duration-300 ${
                     scrollingUp ? 'transform translate-y-0' : '-translate-y-full'
                 }`}
             >
                 <div className="container mx-auto flex justify-center items-end px-4 z-10 backdrop-blur-md">
-                    <div className="flex gap-4 text-white border-2 border-white p-1 rounded-full px-1">
+                <div className="relative w-full sm:w-0">
+                <div
+                        className="sm:hidden absolute w-full flex justify-end top-4 z-30 text-white hover:bg-transparent p-2 rounded-full cursor-pointer"
+                        onClick={toggleMenu}
+                    >
+                        {isMenuOpen ? (
+                            <IoCloseOutline
+                                className="text-3xl transition-all duration-300 ease-in-out transform hover:scale-125 z-10"
+                            />
+                        ) : (
+                            <GiHamburgerMenu
+                                className="text-2xl transition-all duration-300 ease-in-out transform hover:scale-125"
+                            />
+                        )}
+                    </div>
+
+                    {isMenuOpen && (
+    <div className="z-1 h-220 fixed top-0 left-0 w-full bg-[#1C5B6C] flex justify-center items-center pb-20">
+        <div className="text-white text-3xl font-bold space-y-6">
+            <a
+                href="#home"
+                onClick={() => handleLinkClick('home')}
+                className={`block hover:text-[#a3e5d9]/50 ${activeLink === 'home' ? 'text-[#a3e5d9]' : ''}`}
+            >
+                Home
+            </a>
+            <a
+                href="#projects"
+                onClick={() => handleLinkClick('projects')}
+                className={`block hover:text-[#a3e5d9]/50 ${activeLink === 'projects' ? 'text-[#a3e5d9]' : ''}`}
+            >
+                Projects
+            </a>
+            <a
+                href="#services"
+                onClick={() => handleLinkClick('services')}
+                className={`block hover:text-[#a3e5d9]/50 ${activeLink === 'services' ? 'text-[#a3e5d9]' : ''}`}
+            >
+                Services
+            </a>
+            <a
+                href="#testimonials"
+                onClick={() => handleLinkClick('testimonials')}
+                className={`block hover:text-[#a3e5d9]/50 ${activeLink === 'testimonials' ? 'text-[#a3e5d9]' : ''}`}
+            >
+                Testimonials
+            </a>
+            <a
+                href="#contact"
+                onClick={() => handleLinkClick('contact')}
+                className={`block hover:text-[#a3e5d9]/50 ${activeLink === 'contact' ? 'text-[#a3e5d9]' : ''}`}
+            >
+                Contact
+            </a>
+        </div>
+    </div>
+)}
+
+
+                    </div>
+                    <div className="hidden sm:flex sm:gap-0 md:gap-1 text-sm xl:text-base lg:gap-3 xl:gap-3 text-white border-2 border-white p-1 rounded-full px-1">
                         <a
                             href="#home"
                             className={`${
@@ -124,41 +195,41 @@ const Hero = ({bulb}) => {
             </div>
 
             {/* Concave curved shape at bottom */}
-            <div className="absolute bottom-0 left-0 right-0 h-32">
+            <div className="absolute bottom-0 left-0 right-0 h-15 sm:h-20 ">
                 <svg className="absolute bottom-0 w-full h-full" viewBox="0 0 1440 128" preserveAspectRatio="none">
                     <path fill="#ffffff" d="M0,0 C480,128 960,128 1440,0 L1440,128 L0,128 Z" />
                 </svg>
             </div>
 
             {/* Main content */}
-            <div className="container mx-auto px-4 pt-50 pb-25 relative z-10">
+            <div className="container mx-auto px-4 pt-50 pb-50 sm:pb-30 relative z-10">
                 <div className="max-w-4xl mx-auto text-center">
-                    <h2 className="text-xl text-gray-300">Design So Simple, It Feels Like Magic</h2>
-                    <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 leading-[4.5rem]">
+                    <h2 className="text-base md:text-[17px] xl:text-[18px] text-gray-300">Design So Simple, It Feels Like Magic</h2>
+                    <h1 className="text-[34px] md:text-[40px] xl:text-[50px] font-bold text-white mb-4 md:leading-12 xl:leading-14 leading-11 mt-2">
                         Helping You <span className="bg-gradient-to-b from-[#a3e5d9] to-[#4fb1b2] bg-clip-text text-transparent">Stand Out</span> in a World of Scrolls and Clicks
                     </h1>
-                    <p className="text-xl md:text-2xl text-gray-300 mb-8">
+                    <p className="text-[18px] md:text-[20px] xl:text-[21px] text-gray-300 mb-8 sm:mb-4">
                         Hi, I'm Shubham, founder of Glizz Media.
                     </p>
 
-                    <div className="flex flex-wrap justify-center gap-8 mb-5 p-4 rounded-lg">
-                        <div className="flex items-center gap-2 text-gray-300">
-                            <FaRocket className="text-lg text-[#70c7c0] "/>
-                            <span>High Performance</span>
+                        <div className="sm:flex hidden text-sm xl:text-base sm:flex-wrap justify-center gap-6 mb-5 p-4 rounded-lg">
+                            <div className="flex items-center gap-2 text-gray-300">
+                                <FaRocket className="text-lg text-[#70c7c0] "/>
+                                <span>High Performance</span>
+                            </div>
+                            <div className="flex items-center gap-1 text-gray-300">
+                                <FaDollarSign className="text-xl text-[#4fb1b2] "/>
+                                <span>Affordable Pricing</span>
+                            </div>
+                            <div className="flex items-center gap-2 text-gray-300">
+                                <FaPaintBrush className="text-lg text-[#4fb1b2] "/>
+                                <span>Fully Customizable Design</span>
+                            </div>
                         </div>
-                        <div className="flex items-center gap-1 text-gray-300">
-                            <FaDollarSign className="text-xl text-[#4fb1b2] "/>
-                            <span>Affordable Pricing</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-gray-300">
-                            <FaPaintBrush className="text-lg text-[#4fb1b2] "/>
-                            <span>Fully Customizable Design</span>
-                        </div>
-                    </div>
 
                     {/* Buttons without hover transform effect */}
-                    <div className="flex gap-10 justify-center">
-                        <div className="relative w-47 h-14 bg-black bg-opacity-95 cursor-pointer overflow-hidden box-hover rounded-lg">
+                    <div className="flex gap-7 sm:gap-10 justify-center">
+                        <div className="relative h-12 w-35 sm:h-13 sm:w-36 xl:w-41 xl:h-13 bg-black bg-opacity-95 cursor-pointer overflow-hidden box-hover rounded-lg">
                             <div className="rotate-gradient"></div>
                             <button
                                     onClick={() => {
@@ -167,7 +238,7 @@ const Hero = ({bulb}) => {
                                             block: 'start' // Scroll to the top of the element
                                         });
                                     }}
-                                    className={`bg-[#041b28] cursor-pointer text-white hover:bg-gradient-to-b from-[#a3e5d9] to-[#4fb1b2] hover:text-black flex justify-center items-center gap-2 rounded-lg text-base font-medium transition-all duration-300 absolute inset-0.5 bg-opacity-95 z-10 ${
+                                    className={`bg-[#041b28]/90 cursor-pointer text-white hover:bg-gradient-to-b from-[#a3e5d9] to-[#4fb1b2] hover:text-black flex justify-center items-center gap-2 rounded-lg text-sm xl:text-base font-medium transition-all duration-300 absolute inset-0.5 bg-opacity-95 z-10 ${
                                         isHovered ? "shadow-lg" : ""
                                     }`}
                                     onMouseEnter={() => setIsHovered(true)}
@@ -178,10 +249,10 @@ const Hero = ({bulb}) => {
 
                         </div>
 
-                        <div className="relative w-46 h-14 bg-black bg-opacity-95 cursor-pointer overflow-hidden box-hover rounded-lg">
+                        <div className="relative h-12 w-34 sm:h-13 sm:w-35 xl:w-41 xl:h-13 bg-black bg-opacity-95 cursor-pointer overflow-hidden box-hover rounded-lg">
                             <div className="rotate-gradient"></div>
                             <button
-                                className={`text-white cursor-pointer bg-[#041b28] hover:bg-gradient-to-b from-[#a3e5d9] to-[#4fb1b2] hover:text-black rounded-lg text-base font-medium transition-all duration-300 absolute inset-0.5 bg-opacity-95 flex justify-center items-center gap-2 z-10 ${
+                                className={`text-white cursor-pointer bg-[#041b28]/90 hover:bg-gradient-to-b from-[#a3e5d9] to-[#4fb1b2] hover:text-black rounded-lg text-sm xl:text-base font-medium transition-all duration-300 absolute inset-0.5 bg-opacity-95 flex justify-center items-center gap-2 z-10 ${
                                     isHovered ? "shadow-lg" : ""
                                 }`}
                                 onMouseEnter={() => setIsHovered(true)}

@@ -1,6 +1,6 @@
-import React from "react"
+import React from "react";
 
-export default function LatestWork({plat}) {
+export default function LatestWork({ plat }) {
   const projects = [
     {
       title: "Video Editors Portfolio",
@@ -26,7 +26,6 @@ export default function LatestWork({plat}) {
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-29%20180115-4BcJbHU8h93M9AiFJiO5PJGqsznG1T.png",
     },
-    // Additional cards with the requested gradient
     {
       title: "Mobile App Design",
       description:
@@ -35,52 +34,49 @@ export default function LatestWork({plat}) {
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-29%20180115-4BcJbHU8h93M9AiFJiO5PJGqsznG1T.png",
     },
-    
-  ]
+  ];
 
   return (
-    <div id="projects" className="min-h-screen bg-[#fff] p-8">
+    <div id="projects" className="min-h-screen bg-[#fff] p-4 sm:p-8">
+      <div className="mx-auto max-w-6xl relative">
+        <h2 className="text-[35px] sm:text-[43px] font-bold text-black text-center mb-5 sm:mb-10 leading-11">
+          Our Creative Journey -{" "}
+          <span className="bg-gradient-to-r from-[#1C5B6C] to-[#3d8c94] bg-clip-text text-transparent">
+            Top Projects
+          </span>
+          <h4 className="text-sm sm:text-base lg:text-lg mt-3 text-[#7b828d]">
+            Crafting impactful websites that accelerate business success, driven by a legacy of innovation and excellence
+          </h4>
+        </h2>
 
-  <div className="mx-auto max-w-6xl relative"> {/* Add relative positioning to this container */}
-    <h2 className="text-[43px] font-bold text-black text-center mb-10">
-      Our Creative Journey -{" "}
-      <span className="bg-gradient-to-r  from-[#1C5B6C] to-[#3d8c94]  bg-clip-text text-transparent">
-        Top Projects
-      </span>
-      <h4 className="text-lg mt-3 text-[#7b828d]">Crafting impactful websites that accelerate business success, driven by a legacy of innovation and excellence</h4>
-    </h2>
-
-    {/* Image positioned absolutely */}
-    
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
-      {projects.map((project, index) => (
-        <div
-          key={index}
-          className="rounded-lg overflow-hidden shadow-xl bg-gradient-to-r from-[#03222D] to-[#1C5B6C] text-white z-10"
-        >
-          <img
-            src={project.image || "/placeholder.svg"}
-            alt={project.title}
-            className="w-full h-48 object-cover"
-          />
-          <div className="p-6">
-            <div className="text-sm mb-2">{project.tech}</div>
-            <h2 className="text-2xl font-bold mb-3">{project.title}</h2>
-            <p className="mb-4 text-gray-300">{project.description}</p>
-            <div className="pt-4">
-              <a
-                href="#"
-                className="inline-block rounded-lg bg-[#4fb1b2] px-6 py-2 text-sm font-medium text-white transition-all duration-300 hover:bg-[#4fb1b2]/80"
-              >
-                Visit Now
-              </a>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-2 sm:p-6 h-122 overflow-y-auto custom-scrollbar-container">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="rounded-lg h-110 sticky top-0 custom-scrollbar overflow-hidden shadow-xl bg-gradient-to-r from-[#03222D] to-[#1C5B6C] text-white z-10"
+            >
+              <img
+                src={project.image || "/placeholder.svg"}
+                alt={project.title}
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6">
+                <div className="text-sm mb-2">{project.tech}</div>
+                <h2 className="text-xl font-bold mb-3">{project.title}</h2>
+                <p className="mb-4 text-sm text-gray-300">{project.description}</p>
+                <div className="pt-4">
+                  <a
+                    href="#"
+                    className="inline-block rounded-lg bg-[#4fb1b2] px-4 xl:px-6 py-2 text-sm font-medium text-white transition-all duration-300 hover:bg-[#4fb1b2]/80"
+                  >
+                    Visit Now
+                  </a>
+                </div>
+              </div>
             </div>
-          </div>
+          ))}
         </div>
-      ))}
+      </div>
     </div>
-  </div>
-</div>
-
-  )
+  );
 }

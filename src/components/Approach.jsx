@@ -28,7 +28,7 @@ export default function LatestWork() {
   return (
     <div className="min-h-screen bg-white p-8">
       <div className="mx-auto max-w-4xl">
-        <h2 className="text-4xl font-bold text-gray-800 text-center mb-16">
+        <h2 className="text-3xl xl:text-4xl font-bold text-gray-800 text-center sm:leading-11 mb-10 xl:mb-16">
           My <span className="bg-gradient-to-r from-[#1C5B6C] to-[#3d8c94] bg-clip-text text-transparent">Approach</span> - Creating a Website in <span className="bg-gradient-to-r  from-[#1C5B6C] to-[#3d8c94]  bg-clip-text text-transparent">4 Easy</span> Steps
         </h2>
         <div className="relative">
@@ -52,18 +52,18 @@ export default function LatestWork() {
                 }`}
               >
                 <div className="group rounded-xl bg-[#e0f7fa] p-6 shadow-lg transition-all duration-300 hover:shadow-2xl hover:shadow-[#4fb1b2]/20 border border-[#e2e8f0]">
-                  <div className="mb-4">
+                  <div className="mb-2">
                     {/* Icon and Title */}
                     <div className="flex items-center space-x-3">
                       {project.icon}
-                      <h3 className="mb-1 text-2xl font-bold text-gray-800">
+                      <h3 className="mb-1 text-xl xl:text-2xl font-bold text-gray-800">
                         <span className="bg-[#03222D] bg-clip-text text-transparent">
                           {project.title}
                         </span>
                       </h3>
                     </div>
                   </div>
-                  <h3 className="mb-1 text-base text-gray-800">{project.period}</h3>
+                  <h3 className="mb-1 text-sm xl:text-base text-gray-800">{project.period}</h3>
                 </div>
               </div>
             </div>

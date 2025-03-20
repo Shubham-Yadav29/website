@@ -43,7 +43,7 @@
         <div id='services' className="min-h-screen bg-[#03222D] py-15 px-4">
         <div className="max-w-7xl mx-auto">
             <h1 className="text-center mb-7 text-5xl font-bold text-white">Services</h1>
-            <h1 className="text-center mb-14 text-base font-bold">
+            <h1 className="text-center mb-14 text-sm xl:text-base font-bold">
             <span className="text-[#fff]/60">Our team specializes in Professional <span className="text-[#a3e5d9]">Website Development</span> for Businesses, ensuring a seamless online presence
             that reflects your <span className="text-[#a3e5d9]">vision</span> and captivates your audience.</span>
             </h1>
@@ -54,11 +54,11 @@
                 key={index}
                 className=" relative p-6 rounded-lg border border-[#1e2d4d] bg-[#050E1E]/20 backdrop-blur-sm group hover:border-[#60A5FA]/30 transition-all duration-300"
                 >
-                <div className="flex flex-col gap-4">
-                    <div className="text-[#4fb1b2] w-10 h-10 ">
+                <div className="flex flex-col gap-4 sticky">
+                    <div className="text-[#4fb1b2] w-8 h-8  ">
                     <item.icon size={96} className="w-full h-full stroke-[1.5]" />
                     </div>
-                    <h2 className="text-white text-2xl font-semibold">{item.title}</h2>
+                    <h2 className="text-white text-xl font-semibold">{item.title}</h2>
                     <p className="text-gray-400 text-base">{item.description}</p>
                 </div>
                 </div>
@@ -69,3 +69,5 @@
     )
     }
 
+
+    
