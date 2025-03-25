@@ -75,7 +75,7 @@ export default function TestimonialCarousel() {
   }
 
   return (
-    <div id="testimonials" className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-4 pb-27 lg:pb-5">
+    <div id="testimonials" className="min-h-screen bg-white flex flex-col items-center justify-center p-4 pb-27 lg:pb-5">
 
       <div className="w-full h-full flex flex-col items-center lg:flex-row justify-between">
         <div className="md:max-w-4xl lg:max-w-xl xl:max-w-4xl max-w-2xl w-full flex-col flex justify-center items-start xl:pl-10 xl:pr-60 pb-10">

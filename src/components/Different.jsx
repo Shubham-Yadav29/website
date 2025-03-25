@@ -1,6 +1,7 @@
 import React from 'react'
 import { AiOutlineRight } from 'react-icons/ai';
 import { FaPhoneAlt } from 'react-icons/fa';
+import { Phone } from "lucide-react"
 
 const Different = ({icon , robert , robert2}) => {
     const phoneNumber = "+1234567890";
@@ -34,19 +35,21 @@ const Different = ({icon , robert , robert2}) => {
             </div>
         </div>
         </div>
-        <div className='w-full h-20 bg-[#e0f7fa]/50 flex justify-center'>
-            
-            <div className='bg-[#1C5B6C] w-full sm:w-[95%] xl:w-[90%] rounded-xl sm:rounded-2xl p-2 h-[70%] px-3 sm:px-10 py-5 text-white text-xl text-center flex justify-center items-center'>
-                <div className='w-[60%] text-end text-sm sm:text-base'><p><span className='font-semibold text-base sm:text-lg'>Free Consultation</span> - Get on a Call Now</p></div>
-                <div className='w-[40%] flex justify-end'>
-                    
-                <button className='flex cursor-pointer items-center bg-[#FFB74D] text-[#1C5B6C] py-2 sm:py-2 px-3 sm:px-5 text-sm sm:text-base rounded-full transition-transform transform hover:translate-x-2'>
-                <FaPhoneAlt className='mr-2' /> 
-                Get on Call
-                </button>
-                </div>
+        <div className='h-30 flex justify-center'>
+        <div className="flex items-center justify-between gap-5 mb-2 bg-[#1C5B6C] p-6 rounded-4xl">
+            <div className="text-[#e8f5e9] text-5xl font-bold w-[12%] ml-2">67%</div>
+            <div className='flex gap-6 w-[88%]'>
+            <div className="text-gray-300 text-lg w-[75%]">
+            increase in sales is brought by chatbots, according to business leaders (Outgrow)
             </div>
+            <button className="flex cursor-pointer w-[20%] items-center bg-[#FFB74D] text-[#1C5B6C] py-2 px-4 sm:px-6 text-sm sm:text-base rounded-full transition-transform transform hover:translate-x-2">
+                <Phone className="mr-2 h-4 w-4" />
+                Get on Call
+            </button>
+            </div>
+        </div>
     </div>
+    
 
         <div className='flex flex-col md:flex-row md:items-center'>
         <div className="flex-1 p-8 md:px-0 py-0">

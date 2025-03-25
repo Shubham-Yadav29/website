@@ -251,6 +251,7 @@ const Hero = ({bulb}) => {
 
                         <div className="relative h-12 w-34 sm:h-13 sm:w-35 xl:w-41 xl:h-13 bg-black bg-opacity-95 cursor-pointer overflow-hidden box-hover rounded-lg">
                             <div className="rotate-gradient"></div>
+                            <a href='#contact'>
                             <button
                                 className={`text-white cursor-pointer bg-[#041b28]/90 hover:bg-gradient-to-b from-[#a3e5d9] to-[#4fb1b2] hover:text-black rounded-lg text-sm xl:text-base font-medium transition-all duration-300 absolute inset-0.5 bg-opacity-95 flex justify-center items-center gap-2 z-10 ${
                                     isHovered ? "shadow-lg" : ""
@@ -258,8 +259,9 @@ const Hero = ({bulb}) => {
                                 onMouseEnter={() => setIsHovered(true)}
                                 onMouseLeave={() => setIsHovered(false)}
                             >
-                                Get on Call  <CiLocationArrow1 />
+                                Contact Us  <CiLocationArrow1 />
                             </button>
+                            </a>
                         </div>
                     </div>
                 </div>

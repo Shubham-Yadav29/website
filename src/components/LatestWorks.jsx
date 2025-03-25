@@ -1,45 +1,23 @@
 import React from "react";
 
-export default function LatestWork({ plat }) {
+export default function LatestWork({ plat , project1}) {
   const projects = [
     {
-      title: "Video Editors Portfolio",
+      title: "Real-Estate Website",
       description:
-        "This is a portfolio website for a video editor who wanted a website where he can showcase his work in a professional way.",
-      tech: "Framer",
+        "This is a real estate website created for self-learning purposes to practice and gain a better understanding of various concepts..",
+      tech: "React & Tailwind",
       image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-29%20180115-4BcJbHU8h93M9AiFJiO5PJGqsznG1T.png",
+        project1,
     },
-    {
-      title: "Logo Designer Portfolio",
-      description:
-        "I created this portfolio website for a logo designer who wanted to represent himself as a professional.",
-      tech: "Framer",
-      image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-29%20180115-4BcJbHU8h93M9AiFJiO5PJGqsznG1T.png",
-    },
-    {
-      title: "Nand Vatika",
-      description:
-        "I created this Website for NandVatika and they are Real Estate company that helps people to find their dream house in Ranchi.",
-      tech: "WordPress",
-      image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-29%20180115-4BcJbHU8h93M9AiFJiO5PJGqsznG1T.png",
-    },
-    {
-      title: "Mobile App Design",
-      description:
-        "A sleek mobile application interface designed for a fitness tracking platform with real-time analytics.",
-      tech: "React Native",
-      image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-29%20180115-4BcJbHU8h93M9AiFJiO5PJGqsznG1T.png",
-    },
+    
+    
   ];
 
   return (
-    <div id="projects" className="min-h-screen bg-[#fff] p-4 sm:p-8">
+    <div id="projects" className="min-h-screen bg-[#fff] ">
       <div className="mx-auto max-w-6xl relative">
-        <h2 className="text-[35px] sm:text-[43px] font-bold text-black text-center mb-5 sm:mb-10 leading-11">
+        <h2 className="sm:p-8 text-[35px] sm:text-[43px] font-bold text-black text-center mb-5 sm:mb-0 p-5 leading-11">
           Our Creative Journey -{" "}
           <span className="bg-gradient-to-r from-[#1C5B6C] to-[#3d8c94] bg-clip-text text-transparent">
             Top Projects
@@ -49,25 +27,25 @@ export default function LatestWork({ plat }) {
           </h4>
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-2 sm:p-6 h-122 overflow-y-auto custom-scrollbar-container">
+        <div className="grid p-6 md:p-8 lg:p-0 sm:px-20 rounded-lg grid-cols-1 md:grid-cols-2 base:grid-cols-3 lg:grid-cols-3 gap-6 h-122 sm:h-auto overflow-y-auto sm:overflow-y-hidden custom-scrollbar-container">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="rounded-lg h-110 sticky top-0 custom-scrollbar overflow-hidden shadow-xl bg-gradient-to-r from-[#03222D] to-[#1C5B6C] text-white z-10"
+              className="rounded-lg sm:my-8 h-115 bg-[#e0f7fa]/10 sticky top-0 custom-scrollbar overflow-hidden shadow-xl text-black z-10"
             >
               <img
                 src={project.image || "/placeholder.svg"}
                 alt={project.title}
-                className="w-full h-48 object-cover"
+                className="w-full h-52 object-cover"
               />
               <div className="p-6">
                 <div className="text-sm mb-2">{project.tech}</div>
-                <h2 className="text-xl font-bold mb-3">{project.title}</h2>
-                <p className="mb-4 text-sm text-gray-300">{project.description}</p>
+                <h2 className="text-xl font-bold mb-3 text-[#3d8c94]">{project.title}</h2>
+                <p className="mb-4 text-sm text-gray-600">{project.description}</p>
                 <div className="pt-4">
                   <a
-                    href="#"
-                    className="inline-block rounded-lg bg-[#4fb1b2] px-4 xl:px-6 py-2 text-sm font-medium text-white transition-all duration-300 hover:bg-[#4fb1b2]/80"
+                    href="https://real-estate-webdev.netlify.app/" target="_blank"
+                    className="inline-block rounded-lg bg-[#3d8c94] px-4 xl:px-6 py-2 text-sm font-medium text-white transition-all duration-300 hover:bg-[#1C5B6C]"
                   >
                     Visit Now
                   </a>

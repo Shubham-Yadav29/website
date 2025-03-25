@@ -1,25 +1,24 @@
-import React from 'react'
-import { FaPhoneAlt } from 'react-icons/fa'; // Importing the call icon
+import { FaPhoneAlt } from "react-icons/fa";
 
-const Urgent = ({free , sec}) => {
+const CtaBanner = () => {
   return (
-    <div className="w-full bg-[#03222D] flex justify-center items-center sm:flex sm:justify-center sm:items-center sm:pl-10 pr-0 pt-5 md:pt-0">
-      <div className=" p-2 rounded-3xl text-center w-[100%] flex flex-col items-center">
-        <h2 className="xl:text-4xl text-[19px] sm:text-[25px] md:text-[30px] font-semibold text-white md:mb-3 mb-2">
-          Get on a Call Now !!
-        </h2>
-        <p className="md:text-xl text-[13px] sm:text-[16px] md:text-[18px] text-white md:mb-6 mb-4">
-          It costs nothing! Get a free consultation today.
+    <div className="w-full mx-auto justify-center bg-[#e0f7fa]/50 flex items-center h-80">
+      <div className="bg-[#3d8c94] flex justify-between items-center sm:gap-10 flex-col sm:flex-row rounded-xl p-8 md:p-12 w-[88%]">
+      <div className="text-white mb-6 md:mb-0 md:pr-8 ">
+        <h2 className="text-2xl md:text-2xl lg:text-[33px] xl:text-[34px] font-bold mb-3">Ready to turn your ideas into a reality?</h2>
+        <p className="text-sm md:text-base xl:text-lg opacity-90 max-w-2xl">
+          Contact us to get the best solutions tailored to your specific needs and requirements.
         </p>
-        <button className="flex items-center bg-[#FFB74D] text-[#1C5B6C] text-sm sm:text-base md:py-3 md:px-8 py-2 px-3 rounded-2xl transition-transform transform hover:translate-x-2">
-          <FaPhoneAlt className="mr-2" />
-          Call Now
-        </button>
       </div>
-      <img src={free} className='md:h-80 md:w-80 h-50 w-50 sm:h-60 sm:w-60'></img>    
+<a href="#contact">
+      <button className="cursor-pointer flex items-center text-sm bg-white text-[#1C5B6C] py-3 px-6 sm:px-0 md:w-45 lg:w-40 sm:w-45 justify-center  h-12 rounded-lg font-medium transition-transform transform hover:translate-x-2">
+        <FaPhoneAlt className="mr-2 h-3 w-3 sm:h-4 sm:w-4" />
+        Contact Us
+      </button>
+      </a>
+      </div>
     </div>
   );
 };
 
-export default Urgent;
-
+export default CtaBanner;

@@ -16,12 +16,13 @@ import Urgent from "./components/Urgent";
 import Footer from "./components/Footer";
 import Connect from "./components/Connect";
 import me from './images/me.png';
+import project1 from './images/project1.png';
 export default function Page() {
 
   return (
     <div>
       <Hero bulb={bulb}/>
-      <LatestWorks plat={plat}/>
+      <LatestWorks plat={plat} project1={project1}/>
       <Different icon={icon} robert={robert} robert2={robert2} />
       <Approach/>
       <Services/>
