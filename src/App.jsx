@@ -22,7 +22,7 @@ import project1 from './images/project1.png';
 export default function Page() {
 
   return (
-    <div>
+    <div className="Quicksand, sans-serif">
       <Hero bulb={bulb} logo={logo}/>
       <LatestWorks plat={plat} project1={project1}/>
       <Different icon={icon} robert={robert} robert2={robert2} cross={cross} />

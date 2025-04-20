@@ -1,4 +1,8 @@
     @import "tailwindcss";
+      body {
+        font-family: 'Quicksand', sans-serif;
+      }
+            
     @layer components {
     .rotate-gradient {
         position: absolute;
