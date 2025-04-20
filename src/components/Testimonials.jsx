@@ -78,9 +78,9 @@ export default function TestimonialCarousel() {
     <div id="testimonials" className="min-h-screen bg-white flex flex-col items-center justify-center p-4 pb-27 lg:pb-5">
 
       <div className="w-full h-full flex flex-col items-center lg:flex-row justify-between">
-        <div className="md:max-w-4xl lg:max-w-xl xl:max-w-4xl max-w-2xl w-full flex-col flex justify-center items-start xl:pl-10 xl:pr-60 pb-10">
+        <div className="md:max-w-4xl lg:max-w-xl xl:max-w-6xl max-w-2xl w-full flex-col flex justify-center items-start xl:pl-10 xl:pr-60 pb-10">
           <h1 className="md:text-5xl xl:text-[45px] lg:text-[38px] sm:text-[40px] font-bold text-gray-800 text-4xl text-center lg:text-start mt-5 px-1 lg:px-5">Great experiences of our previous <span className="bg-gradient-to-r from-[#1C5B6C] to-[#3d8c94] bg-clip-text text-transparent">clients</span></h1>
-          <p className="xl:text-xl text-sm lg:text-base md:text-lg text-center lg:text-start text-gray-800/60 mt-7 sm:ml-5 lg:pr-14">Our team specializes in Professional Website Development for Businesses, ensuring a seamless online presence that reflects your vision and captivates your audience.</p>
+          <p className="xl:text-xl text-sm lg:text-base md:text-lg text-center lg:text-start text-gray-800/60 mt-7 sm:ml-5 lg:pr-14">We excels in crafting professional websites for businesses & Creators, delivering a smooth digital presence that embodies your vision and captivates your audience.</p>
         </div>
 
         <div

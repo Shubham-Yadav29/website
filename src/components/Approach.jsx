@@ -26,7 +26,7 @@ export default function LatestWork() {
   ];
 
   return (
-    <div className="min-h-screen bg-white p-8">
+    <div className="min-h-screen bg-white p-8"><div className="bg-[#e0f7fa] h-1  mb-10 sm:mb-15"></div>
       <div className="mx-auto max-w-4xl">
         <h2 className="text-3xl xl:text-4xl font-bold text-gray-800 text-center sm:leading-11 mb-10 xl:mb-16">
           My <span className="bg-gradient-to-r from-[#1C5B6C] to-[#3d8c94] bg-clip-text text-transparent">Approach</span> - Creating a Website in <span className="bg-gradient-to-r  from-[#1C5B6C] to-[#3d8c94]  bg-clip-text text-transparent">4 Easy</span> Steps

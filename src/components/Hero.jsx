@@ -93,45 +93,24 @@ const Hero = ({bulb}) => {
                     </div>
 
                     {isMenuOpen && (
-    <div className="z-1 h-220 fixed top-0 left-0 w-full bg-[#1C5B6C] flex justify-center items-center pb-20">
-        <div className="text-white text-3xl font-bold space-y-6">
-            <a
-                href="#home"
-                onClick={() => handleLinkClick('home')}
-                className={`block hover:text-[#a3e5d9]/50 ${activeLink === 'home' ? 'text-[#a3e5d9]' : ''}`}
-            >
-                Home
-            </a>
-            <a
-                href="#projects"
-                onClick={() => handleLinkClick('projects')}
-                className={`block hover:text-[#a3e5d9]/50 ${activeLink === 'projects' ? 'text-[#a3e5d9]' : ''}`}
-            >
-                Projects
-            </a>
-            <a
-                href="#services"
-                onClick={() => handleLinkClick('services')}
-                className={`block hover:text-[#a3e5d9]/50 ${activeLink === 'services' ? 'text-[#a3e5d9]' : ''}`}
-            >
-                Services
-            </a>
-            <a
-                href="#testimonials"
-                onClick={() => handleLinkClick('testimonials')}
-                className={`block hover:text-[#a3e5d9]/50 ${activeLink === 'testimonials' ? 'text-[#a3e5d9]' : ''}`}
-            >
-                Testimonials
-            </a>
-            <a
-                href="#contact"
-                onClick={() => handleLinkClick('contact')}
-                className={`block hover:text-[#a3e5d9]/50 ${activeLink === 'contact' ? 'text-[#a3e5d9]' : ''}`}
-            >
-                Contact
-            </a>
-        </div>
+  <div className="z-10 h-90 fixed top-0 left-0 w-full bg-[#1C5B6C] flex justify-start pl-18 items-end pb-15">
+    <div className="space-y-3 text-2xl flex flex-col text-start">
+      {['home', 'projects', 'services', 'testimonials', 'contact'].map((link) => (
+        <a
+          key={link}
+          href={`#${link}`}
+          onClick={() => handleLinkClick(link)}
+          className={`block relative text-white text-xl font-medium px-2 py-1 overflow-hidden
+            after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:bg-[#a3e5d9]
+            after:transform after:scale-x-0 after:origin-left after:transition-transform after:duration-300
+            hover:after:scale-x-100
+            ${activeLink === link ? 'text-[#a3e5d9] after:scale-x-100' : ''}`}
+        >
+          {link.charAt(0).toUpperCase() + link.slice(1)}
+        </a>
+      ))}
     </div>
+  </div>
 )}
 
 
@@ -209,7 +188,7 @@ const Hero = ({bulb}) => {
                         Helping You <span className="bg-gradient-to-b from-[#a3e5d9] to-[#4fb1b2] bg-clip-text text-transparent">Stand Out</span> in a World of Scrolls and Clicks
                     </h1>
                     <p className="text-[18px] md:text-[20px] xl:text-[21px] text-gray-300 mb-8 sm:mb-4">
-                        Hi, I'm Shubham, founder of Glizz Media.
+                        Hi, I'm Shubham, Website Developer & Designer
                     </p>
 
                         <div className="sm:flex hidden text-sm xl:text-base sm:flex-wrap justify-center gap-6 mb-5 p-4 rounded-lg">
@@ -259,7 +238,7 @@ const Hero = ({bulb}) => {
                                 onMouseEnter={() => setIsHovered(true)}
                                 onMouseLeave={() => setIsHovered(false)}
                             >
-                                Contact Us  <CiLocationArrow1 />
+                                Contact Me  <CiLocationArrow1 />
                             </button>
                             </a>
                         </div>

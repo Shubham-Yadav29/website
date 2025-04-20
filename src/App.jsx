@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import LatestWorks from "./components/LatestWorks";
 import Approach from "./components/Approach";
 import bulb from './images/bulb.png';
+import logo from './images/logo.png';
 import plat from './images/plat.png';
 import icon from './images/icon.png';
 import robert from './images/robert.png';
@@ -16,14 +17,15 @@ import Urgent from "./components/Urgent";
 import Footer from "./components/Footer";
 import Connect from "./components/Connect";
 import me from './images/me.png';
+import cross from './images/cross.png';
 import project1 from './images/project1.png';
 export default function Page() {
 
   return (
     <div>
-      <Hero bulb={bulb}/>
+      <Hero bulb={bulb} logo={logo}/>
       <LatestWorks plat={plat} project1={project1}/>
-      <Different icon={icon} robert={robert} robert2={robert2} />
+      <Different icon={icon} robert={robert} robert2={robert2} cross={cross} />
       <Approach/>
       <Services/>
       <Testimonials/>
