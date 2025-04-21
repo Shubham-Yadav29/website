@@ -3,6 +3,8 @@ import { FaRocket, FaDollarSign, FaPaintBrush } from 'react-icons/fa';
 import { CiLocationArrow1 } from "react-icons/ci";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseOutline } from 'react-icons/io5';
+import { FaWhatsapp } from 'react-icons/fa';
+
 
 const Hero = ({bulb}) => {
     const [isHovered, setIsHovered] = useState(false);
@@ -93,26 +95,25 @@ const Hero = ({bulb}) => {
                     </div>
 
                     {isMenuOpen && (
-  <div className="z-10 h-90 fixed top-0 left-0 w-full bg-[#1C5B6C] flex justify-start pl-18 items-end pb-15">
-    <div className="space-y-3 text-2xl flex flex-col text-start">
-      {['home', 'projects', 'services', 'testimonials', 'contact'].map((link) => (
-        <a
-          key={link}
-          href={`#${link}`}
-          onClick={() => handleLinkClick(link)}
-          className={`block relative text-white text-xl font-medium px-2 py-1 overflow-hidden
-            after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:bg-[#a3e5d9]
-            after:transform after:scale-x-0 after:origin-left after:transition-transform after:duration-300
-            hover:after:scale-x-100
-            ${activeLink === link ? 'text-[#a3e5d9] after:scale-x-100' : ''}`}
-        >
-          {link.charAt(0).toUpperCase() + link.slice(1)}
-        </a>
-      ))}
+    <div className="z-10 h-90 fixed top-0 left-0 w-full bg-[#1C5B6C] flex justify-start pl-18 items-end pb-15">
+        <div className="space-y-3 text-2xl flex flex-col text-start">
+        {['home', 'projects', 'services', 'testimonials', 'contact'].map((link) => (
+            <a
+            key={link}
+            href={`#${link}`}
+            onClick={() => handleLinkClick(link)}
+            className={`block relative text-white text-xl font-medium px-2 py-1 overflow-hidden
+                after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:bg-[#a3e5d9]
+                after:transform after:scale-x-0 after:origin-left after:transition-transform after:duration-300
+                hover:after:scale-x-100
+                ${activeLink === link ? 'text-[#a3e5d9] after:scale-x-100' : ''}`}
+            >
+            {link.charAt(0).toUpperCase() + link.slice(1)}
+            </a>
+        ))}
+        </div>
     </div>
-  </div>
-)}
-
+    )}
 
                     </div>
                     <div className="hidden sm:flex sm:gap-0 md:gap-1 text-sm xl:text-base lg:gap-3 xl:gap-3 text-white border-2 border-white p-1 rounded-full px-1">
@@ -185,7 +186,7 @@ const Hero = ({bulb}) => {
                 <div className="max-w-4xl mx-auto text-center">
                     <h2 className="text-base md:text-[17px] xl:text-[18px] text-gray-300">Design So Simple, It Feels Like Magic</h2>
                     <h1 className="text-[34px] md:text-[40px] xl:text-[50px] font-bold text-white mb-4 md:leading-12 xl:leading-14 leading-11 mt-2">
-                        Helping You <span className="bg-gradient-to-b from-[#a3e5d9] to-[#4fb1b2] bg-clip-text text-transparent">Stand Out</span> in a World of Scrolls and Clicks
+                        Helping You <span className="bg-gradient-to-b from-[#a3e5d9] to-[#4fb1b2] bg-clip-text text-transparent">Stand Out</span>  in a World of Scrolls and Clicks
                     </h1>
                     <p className="text-[18px] md:text-[20px] xl:text-[21px] text-gray-300 mb-8 sm:mb-4">
                         Hi, I'm Shubham, Website Developer & Designer

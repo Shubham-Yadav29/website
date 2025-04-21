@@ -44,6 +44,7 @@ export default function LandingSection() {
           </a>
         </div>
       </div>
+      
     </div>
   )
 }

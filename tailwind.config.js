@@ -7,10 +7,14 @@ export default {
         darkMode:"class",
         theme: {
             extend: {
-                fontFamily: {
-                    inter: ['Inter', 'sans-serif'],
-                    },
+                animation: {
+                    'bounce-slow': 'bounce 2s infinite ease-in-out',
                 },
+                
+            fontFamily: {
+                inter: ['Inter', 'sans-serif'],
+                },
+                }
         },
         plugins: [],
     }

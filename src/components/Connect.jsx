@@ -17,7 +17,7 @@ export default function LeadForm({ group, me }) {
         <div className="grid lg:grid-cols-[50%_40%] md:grid-cols-[40%_50%] md:gap-0 xl:gap-20 gap-2 items-center">
           <div className="relative">
             <div className="absolute inset-0 sm:flex">
-              <div className="absolute top-45 left-15 xl:top-4 xl:left-32 sm:top-40 sm:left-42 lg:top-4 lg:left-24 md:hidden sm:flex flex lg:flex xl:flex">
+              <div className="absolute top-84 left-2 xl:top-4 xl:left-32 sm:top-40 sm:left-42 lg:top-4 lg:left-24 md:hidden sm:flex flex lg:flex xl:flex">
               <div className="flex items-center gap-2 bg-[#1C5B6C] flex-col z-20 p-3 rounded-3xl shadow-lg border border-[#a3e5d9]">
                 <FaRobot className="sm:w-10 sm:h-10 h-7 w-7 text-[#fff]" />
                   <span className="sm:text-sm text-[12px] font-medium text-[#a3e5d9]">AI Chatbot</span>
@@ -33,7 +33,7 @@ export default function LeadForm({ group, me }) {
               </div>
 
               {/* Website Tracking */}
-              <div className="absolute bottom-50 left-2 xl:bottom-25 xl:left-17 sm:bottom-50 sm:left-23  lg:bottom-50 lg:left-8 md:hidden flex sm:flex lg:flex xl:flex">
+              <div className="absolute bottom-88 left-7 xl:bottom-25 xl:left-17 sm:bottom-50 sm:left-23  lg:bottom-50 lg:left-8 md:hidden flex sm:flex lg:flex xl:flex">
                 <div className="flex items-center gap-2 bg-[#1C5B6C] p-3 z-20 rounded-3xl flex-col shadow-lg border border-[#a3e5d9]">
                 <FaUserPlus className="sm:w-10 sm:h-10 h-7 w-7 text-[#fff]" />
                   <span className="sm:text-sm text-[12px] font-medium text-[#a3e5d9]">Lead Capture</span>
@@ -71,11 +71,11 @@ export default function LeadForm({ group, me }) {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <p className="text-[#1C5B6C] font-bold sm:text-base lg:text-base text-sm md:text-sm">#1 Easy to Use and Hard to Forget</p>
+                  <p className="text-[#1C5B6C] font-bold sm:text-base lg:text-base text-sm md:text-sm"> Easy to Use and Hard to Forget</p>
                 </div>
                 <div className="flex justify-center w-full text-center">
                   <h1 className="sm:text-3xl lg:text-3xl text-2xl items-center md:text-2xl font-bold text-[#1C5B6C]/70">
-                    Partner with the Leading Website Development <span className="text-[#1C5B6C]">Expertdwhuu</span>
+                    Partner with the Leading Website Development <span className="text-[#1C5B6C]">Expert</span>
                   </h1>
                 </div>
             </div>

@@ -9,8 +9,8 @@ const Different = ({icon , robert , robert2 ,cross}) => {
 
     return (
         <div className="flex flex-col ">
-        <div className='z-10 text-[33px] sm:text-[36px] xl:text-[40px] bg-[#e0f7fa]/50 p-5 sm:p-6 text-center font-bold xl:px-60 h-25 leading-10 sm:leading-12 '>Uncover the <span className="bg-gradient-to-r from-[#1C5B6C] to-[#3d8c94] bg-clip-text text-transparent">Secrets</span> to Elevating Your Online Visibility</div>
-        <div className='flex flex-col md:flex-row xl:px-25 pt-5 bg-[#e0f7fa]/50 p-5 sm:p-6 md:pt-0 md:pb-5'>
+        <div className='z-10 text-[34px] sm:text-[36px] xl:text-[40px] bg-[#e0f7fa]/50 p-5 sm:p-6 text-center font-bold xl:px-60 h-25 leading-10 sm:leading-12 '>Uncover the <span className="bg-gradient-to-r from-[#1C5B6C] to-[#3d8c94] bg-clip-text text-transparent">Secrets</span> to Elevating Your Online Visibility</div>
+        <div className='flex flex-col pt-10 md:flex-row xl:px-25 bg-[#e0f7fa]/50 p-5 sm:p-6 md:pt-0 md:pb-5'>
         <div className="flex-1 sm:p-8 md:px-4 pb-0 px-2 pt-10 sm:pb-0 justify-center items-start flex flex-col">
             <h1 className="text-3xl sm:text-[32px] md:text-[30px] xl:text-[32px] font-semibold mb-4">
             Missing Smart AI Features? You're <span className='text-red-600'>Losing Out!</span>
@@ -31,8 +31,8 @@ const Different = ({icon , robert , robert2 ,cross}) => {
         </div>
 
         <div className="flex-1 p-8 md:px-1 py-0">
-            <div className="h-70 sm:h-90 rounded-lg flex items-center justify-center">
-            <img src={robert} alt="Relevant Image" className="w-90 sm:w-110 h-50 sm:h-70 md:w-90 md:h-60 xl:w-110 xl:h-70" />
+            <div className="h-50 sm:h-90 rounded-lg flex items-center justify-center">
+            <img src={robert} alt="Relevant Image" className="w-100 sm:w-110 h-50 sm:h-70 md:w-90 md:h-60 xl:w-110 xl:h-70" />
             </div>
         </div>
         </div>
